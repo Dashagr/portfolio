@@ -11115,12 +11115,26 @@ h5,
   font-size: 60px;
 }
 
+.front-page {
+  padding-top: 0px;
+}
+@media (max-width: 767.98px) {
+  .front-page {
+    padding-top: 230px;
+  }
+}
+
 .mouse {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 120px;
   z-index: 2;
+}
+@media (max-width: 767.98px) {
+  .mouse {
+    bottom: 50px;
+  }
 }
 
 .mouse-icon {
@@ -11609,7 +11623,7 @@ h5,
   z-index: 0;
   height: 100%;
   text-decoration: none;
-  cursor: url(/images/cursor.png), pointer;
+  cursor: url(./images/cursor.png), pointer;
 }
 .project.img .text {
   max-width: 75%;

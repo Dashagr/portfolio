@@ -494,7 +494,14 @@ h5,
 	}
 }
 
+//FRONT PAGE SETTINGS
+.front-page {
+	padding-top: 0px;
 
+	@include media-breakpoint-down(sm) {
+		padding-top: 230px;
+	}
+}
 
 //MOUSE WHEEL
 .mouse {
@@ -503,6 +510,10 @@ h5,
 	right: 0;
 	bottom: 120px;
 	z-index: 2;
+	
+	@include media-breakpoint-down(sm) {
+		bottom: 50px;
+	}
 }
 
 .mouse-icon {
@@ -1121,7 +1132,7 @@ h5,
 	z-index: 0;
 	height: 100%;
 	text-decoration: none;
-	cursor: url(/images/cursor.png), pointer;
+	cursor: url(./images/cursor.png), pointer;
 
 	&.img {
 		.text {
