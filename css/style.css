@@ -10763,8 +10763,16 @@ a:hover, a:focus {
   outline: none !important;
 }
 
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
   line-height: 1.5;
   color: rgb(0, 0, 0);
   font-weight: 400;
@@ -11593,43 +11601,50 @@ h1, h2, h3, h4, h5,
 }
 
 .project {
+  overflow: hidden;
+  padding: 0;
   width: 100%;
-  height: 350px;
   margin-bottom: 0;
   position: relative;
   z-index: 0;
+  height: 100%;
+  text-decoration: none;
+  cursor: url(/images/cursor.png), pointer;
 }
-.project.img-2 {
-  height: 600px;
-}
-@media (max-width: 767.98px) {
-  .project.img-2 {
-    height: 285px;
-  }
-}
-.project.img-2 .text {
-  max-width: 45%;
+.project.img .text {
+  max-width: 75%;
   z-index: 1;
 }
-.project.img-2 .text h3 {
-  font-size: 22px;
+.project.img .text h3 {
+  font-size: 26px;
+  font-weight: bold;
 }
-.project.img-2 .text h3 a {
+.project.img .text h3 a {
   color: #fff;
 }
-.project.img-2 .text span {
+.project.img .text span {
   color: rgba(255, 255, 255, 0.8);
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 @media (max-width: 767.98px) {
-  .project.img-2 .text {
+  .project.img .text {
     max-width: 100%;
     opacity: 1;
   }
-  .project.img-2 .text span {
-    color: rgba(255, 255, 255, 0.8);
+  .project.img .text span {
+    color: #232931;
   }
+}
+.project img {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(30%);
+  filter: grayscale(30%);
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 .project .overlay {
   position: absolute;
@@ -11639,10 +11654,20 @@ h1, h2, h3, h4, h5,
   bottom: 0;
   content: "";
   opacity: 0;
-  background: #232931;
+  background: #fff;
   z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  visibility: hidden;
 }
 @media (max-width: 767.98px) {
   .project .overlay {
@@ -11658,13 +11683,13 @@ h1, h2, h3, h4, h5,
 }
 .project .text h3 {
   font-size: 20px;
+  font-weight: 600;
 }
 .project .text h3 a {
-  color: #fff;
+  color: #000000;
 }
-.project .text span {
-  color: rgba(255, 255, 255, 0.8);
-  text-transform: uppercase;
+.project .text p {
+  color: #000000;
   letter-spacing: 2px;
   font-size: 12px;
   font-weight: 600;
@@ -11673,15 +11698,41 @@ h1, h2, h3, h4, h5,
   .project .text {
     opacity: 1;
   }
-  .project .text span {
-    color: rgba(255, 255, 255, 0.8);
+  .project .text p {
+    color: #000000;
   }
 }
 .project:hover .overlay, .project:focus .overlay {
   opacity: 0.9;
+  visibility: visible;
+  z-index: 999;
+}
+.project:hover img, .project:focus img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 .project:hover .text, .project:focus .text {
   opacity: 1;
+}
+.project:hover .text h3, .project:focus .text h3 {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+.project:hover .text p, .project:focus .text p {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .aside-stretch {
@@ -11749,6 +11800,7 @@ textarea.form-control {
 .about-author .desc h3 {
   font-size: 24px;
 }
+
 .ftco-section {
   padding: 7em 0;
   position: relative;
@@ -11772,7 +11824,7 @@ textarea.form-control {
 }
 
 .ftco-footer {
-  font-size: 16px;
+  font-size: 12px;
   background: #000000;
   padding: 7em 0;
   z-index: 0;
@@ -11787,15 +11839,6 @@ textarea.form-control {
   margin-bottom: 40px;
   font-size: 22px;
   font-weight: 600;
-}
-.ftco-footer .ftco-footer-widget ul li {
-  margin-bottom: 10px;
-}
-.ftco-footer .ftco-footer-widget ul li a {
-  color: rgba(255, 255, 255, 0.6);
-}
-.ftco-footer .ftco-footer-widget ul li a span {
-  color: rgba(255, 255, 255, 0.6);
 }
 .ftco-footer .ftco-footer-widget .btn-primary {
   background: #fff !important;
@@ -11959,6 +12002,7 @@ textarea.form-control {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -12036,7 +12080,8 @@ textarea.form-control {
 .block-23 ul {
   padding: 0;
 }
-.block-23 ul li, .block-23 ul li > a {
+.block-23 ul li,
+.block-23 ul li > a {
   display: table;
   line-height: 1.5;
   margin-bottom: 15px;
@@ -12044,7 +12089,8 @@ textarea.form-control {
 .block-23 ul li span {
   color: rgba(255, 255, 255, 0.7);
 }
-.block-23 ul li .icon, .block-23 ul li .text {
+.block-23 ul li .icon,
+.block-23 ul li .text {
   display: table-cell;
   vertical-align: top;
 }
@@ -12071,7 +12117,8 @@ textarea.form-control {
   margin-bottom: 4px;
   font-weight: 400;
 }
-.block-27 ul li a, .block-27 ul li span {
+.block-27 ul li a,
+.block-27 ul li span {
   color: #a0f669;
   text-align: center;
   display: inline-block;
@@ -12081,7 +12128,8 @@ textarea.form-control {
   border-radius: 50%;
   border: 1px solid #cccccc;
 }
-.block-27 ul li.active a, .block-27 ul li.active span {
+.block-27 ul li.active a,
+.block-27 ul li.active span {
   background: #a0f669;
   color: #fff;
   border: 1px solid transparent;
@@ -12148,6 +12196,7 @@ textarea.form-control {
           box-shadow: none !important;
   font-size: 15px;
 }
+
 .block-21 .blog-img {
   display: block;
   height: 80px;
@@ -12196,7 +12245,8 @@ textarea.form-control {
   opacity: 0.5;
 }
 
-.tagcloud a, .tagcloud span {
+.tagcloud a,
+.tagcloud span {
   text-transform: uppercase;
   display: inline-block;
   padding: 4px 10px;
@@ -12207,7 +12257,8 @@ textarea.form-control {
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 11px;
 }
-.tagcloud a:hover, .tagcloud span:hover {
+.tagcloud a:hover,
+.tagcloud span:hover {
   border: 1px solid #000;
 }
 
@@ -12304,35 +12355,43 @@ textarea.form-control {
   font-size: 20px;
 }
 
-.categories, .sidelink {
+.categories,
+.sidelink {
   padding: 0;
   margin: 0;
 }
-.categories li, .sidelink li {
+.categories li,
+.sidelink li {
   position: relative;
   margin-bottom: 10px;
   padding-bottom: 10px;
   list-style: none;
 }
-.categories li:last-child, .sidelink li:last-child {
+.categories li:last-child,
+.sidelink li:last-child {
   margin-bottom: 0;
   border-bottom: none;
   padding-bottom: 0;
 }
-.categories li a, .sidelink li a {
+.categories li a,
+.sidelink li a {
   display: block;
   color: #000000;
 }
-.categories li a span, .sidelink li a span {
+.categories li a span,
+.sidelink li a span {
   position: absolute;
   right: 0;
   top: 0;
   color: #0e6cd8;
 }
-.categories li a:hover, .categories li a:focus, .sidelink li a:hover, .sidelink li a:focus {
+.categories li a:hover, .categories li a:focus,
+.sidelink li a:hover,
+.sidelink li a:focus {
   color: #0e6cd8;
 }
-.categories li.active a, .sidelink li.active a {
+.categories li.active a,
+.sidelink li.active a {
   color: #000000;
   font-style: italic;
 }
