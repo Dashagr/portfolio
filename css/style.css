@@ -11120,7 +11120,7 @@ h5,
 }
 @media (max-width: 575.98px) {
   .front-page {
-    padding-top: 230px;
+    padding-top: 200px;
   }
 }
 
@@ -11321,6 +11321,11 @@ h5,
   position: relative;
   z-index: 1;
 }
+@media (max-width: 767.98px) {
+  .ftco-about .img-section {
+    height: 530px;
+  }
+}
 .ftco-about ul.about-info {
   display: inline-block;
   padding: 0;
@@ -11389,14 +11394,25 @@ h5,
   width: 100%;
   margin-bottom: 7em;
 }
-.page.four {
+.page.three {
   margin-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .page.three {
+    margin-bottom: 4em;
+  }
 }
 .page .heading {
   font-weight: 800;
   font-size: 30px;
   margin-bottom: 30px;
   color: #0e6cd8;
+}
+
+@media (max-width: 767.98px) {
+  #resume-section {
+    padding-top: 6em;
+  }
 }
 
 .resume-wrap {
@@ -11657,8 +11673,8 @@ h5,
   height: auto;
   -webkit-filter: grayscale(30%);
   filter: grayscale(30%);
-  -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 .project .overlay {
   position: absolute;
@@ -11731,8 +11747,8 @@ h5,
 .project:hover .text h3, .project:focus .text h3 {
   -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
@@ -11741,8 +11757,8 @@ h5,
 .project:hover .text p, .project:focus .text p {
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
@@ -11822,6 +11838,15 @@ textarea.form-control {
 @media (max-width: 767.98px) {
   .ftco-section {
     padding: 0 0 6em 0;
+  }
+}
+
+#projects-section {
+  padding: 4em 0 !important;
+}
+@media (max-width: 991.98px) {
+  #projects-section {
+    padding: 2em 0 8em 0 !important;
   }
 }
 
@@ -11966,16 +11991,16 @@ textarea.form-control {
   color: rgb(0, 0, 0);
   letter-spacing: 3px;
 }
-.heading-section h1.big {
+.heading-section h2.big {
   position: absolute;
   top: 0px;
   left: 0;
   font-size: 7vw;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(198, 227, 255, 0.23);
   z-index: -1;
   font-weight: 900;
 }
-.heading-section h1.big.big-2 {
+.heading-section h2.big.big-2 {
   right: 0;
 }
 .heading-section h2 {

@@ -499,7 +499,7 @@ h5,
 	padding-top: 0px;
 
 	@include media-breakpoint-down(xs) {
-		padding-top: 230px;
+		padding-top: 200px;
 	}
 }
 
@@ -759,6 +759,15 @@ h5,
 			position: relative;
 			z-index: 1;
 		}
+
+	}
+
+	.img-section {
+
+
+		@include media-breakpoint-down(sm) {
+			height: 530px;
+		}
 	}
 
 	ul.about-info {
@@ -847,8 +856,12 @@ h5,
 	width: 100%;
 	margin-bottom: 7em;
 
-	&.four {
+	&.three {
 		margin-bottom: 0;
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 4em;
+		}
 	}
 
 	.heading {
@@ -860,7 +873,11 @@ h5,
 }
 
 
-
+#resume-section {
+	@include media-breakpoint-down(sm) {
+		padding-top: 6em;
+	}
+}
 
 .resume-wrap {
 	width: 100%;
@@ -1171,7 +1188,7 @@ h5,
 		height: auto;
 		-webkit-filter: grayscale(30%);
 		filter: grayscale(30%);
-		transition: all 2s ease-out;
+		transition: all 1s ease-out;
 	}
 
 	.overlay {
@@ -1246,14 +1263,14 @@ h5,
 
 			h3 {
 				animation-name: fadeInDown;
-				animation-duration: 1s;
+				animation-duration: .7s;
 				animation-timing-function: linear;
 				animation-iteration-count: 1;
 			}
 
 			p {
 				animation-name: fadeInUp;
-				animation-duration: 1s;
+				animation-duration: .7s;
 				animation-timing-function: linear;
 				animation-iteration-count: 1;
 			}
@@ -1345,6 +1362,14 @@ textarea.form-control {
 
 	@include media-breakpoint-down(sm) {
 		padding: 0 0 6em 0;
+	}
+}
+
+#projects-section {
+	padding: 4em 0 !important;
+
+	@include media-breakpoint-down(md) {
+		padding: 2em 0 8em 0 !important;
 	}
 }
 
@@ -1525,12 +1550,12 @@ textarea.form-control {
 		letter-spacing: 3px;
 	}
 
-	h1.big {
+	h2.big {
 		position: absolute;
 		top: 0px;
 		left: 0;
 		font-size: 7vw;
-		color: rgba(255, 255, 255, .1);
+		color: rgba(198, 227, 255, 0.23);
 		z-index: -1;
 		font-weight: 900;
 
