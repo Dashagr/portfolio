@@ -11118,7 +11118,7 @@ h5,
 .front-page {
   padding-top: 0px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .front-page {
     padding-top: 230px;
   }
@@ -11623,7 +11623,7 @@ h5,
   z-index: 0;
   height: 100%;
   text-decoration: none;
-  cursor: url(./images/cursor.png), pointer;
+  cursor: url(../images/cursor.png), pointer;
 }
 .project.img .text {
   max-width: 75%;
@@ -11821,7 +11821,7 @@ textarea.form-control {
 }
 @media (max-width: 767.98px) {
   .ftco-section {
-    padding: 6em 0;
+    padding: 0 0 6em 0;
   }
 }
 
