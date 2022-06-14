@@ -1,9 +1,10 @@
-# portfolio
+# This is my personal portfolio
 
 You can view this project by clicking on the link below
+
 https://dashagr.github.io/portfolio/
 
-Features:
+## Features:
 
 - Implemented SEO solutions
 - Bootstrap 4
@@ -22,7 +23,7 @@ Features:
 - Portfolio grid
 - Icomoon font icons
 
-Libraries and Plugins
+## Libraries and Plugins
 
 - Bootstrap 4
 - Animate.CSS
