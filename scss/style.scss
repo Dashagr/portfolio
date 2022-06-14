@@ -856,6 +856,12 @@ h5,
 	width: 100%;
 	margin-bottom: 7em;
 
+	&.one {
+		@include media-breakpoint-down(sm) {
+			padding-top: 3em;
+		}
+	}
+
 	&.three {
 		margin-bottom: 0;
 
@@ -1785,6 +1791,8 @@ textarea.form-control {
 
 
 .contact-section {
+	padding: 6em 0;
+
 	.contact-info {
 		p {
 			a {
@@ -1797,10 +1805,7 @@ textarea.form-control {
 		width: 100%;
 		display: block;
 		@include border-radius(4px);
-
-		@include media-breakpoint-down(md) {
-			margin-bottom: 30px;
-		}
+		margin-bottom: 30px;
 
 		.icon {
 			width: 100px;
