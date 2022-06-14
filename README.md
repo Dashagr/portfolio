@@ -5,6 +5,7 @@ https://dashagr.github.io/portfolio/
 
 Features:
 
+- Implemented SEO solutions
 - Bootstrap 4
 - Cross-browser compatibility
 - Fully responsive
