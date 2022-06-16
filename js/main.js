@@ -272,14 +272,17 @@
  	});
 
 
+ 	//easy scrolling effect
+
  	var goHere = function () {
+ 		var headerHeight = $(".navbar-brand").outerHeight();
 
  		$('.mouse-icon').on('click', function (event) {
 
  			event.preventDefault();
 
  			$('html,body').animate({
- 				scrollTop: $('.goto-here').offset().top
+ 				scrollTop: $('.goto-here').offset().top - headerHeight
  			}, 500, 'easeInOutExpo');
 
  			return false;
