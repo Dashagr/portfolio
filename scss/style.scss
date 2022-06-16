@@ -381,7 +381,6 @@ h5,
 		background: $primary;
 		z-index: -1;
 		transform: translateY(-50%);
-		@include border-radius(50%);
 	}
 
 	span {
